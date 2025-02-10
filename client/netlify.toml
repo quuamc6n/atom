@@ -1,6 +1,6 @@
 [build]
   base = "client"  # This is the directory containing your React app
-  publish = "/build"  # The directory where your built React files will be placed
+  publish = "/dist"  # The directory where your built React files will be placed
 
 [[headers]]
   for = "/*.js"
