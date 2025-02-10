@@ -3,7 +3,6 @@ import {
   PrimaryGeneratedColumn,
   Column,
   OneToMany,
-  JoinTable,
   ManyToOne,
 } from "typeorm";
 import { User } from "./User";

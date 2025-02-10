@@ -1,4 +1,4 @@
-import { Invoice } from "../../../../db/src/entity/Invoice";
+import { Invoice } from "../../../types";
 
 interface InvoiceProps {
   invoice: Invoice;

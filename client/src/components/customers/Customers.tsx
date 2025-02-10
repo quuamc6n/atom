@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import { Customer } from "../../../../db/src/entity/Customer";
+import { Customer } from "../../../types";
 import CustomerCard from "./CustomerCard";
 
 const Customers = () => {

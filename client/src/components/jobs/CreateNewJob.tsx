@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Employee } from "../../../../db/src/entity/Employee";
-import { Customer } from "../../../../db/src/entity/Customer";
+import { Employee } from "../../../types";
+import { Customer } from "../../../types";
 
 const CreateNewJob = () => {
   const [formData, setFormData] = useState({

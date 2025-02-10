@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Estimate } from "../../../../db/src/entity/Estimate";
+import { Estimate } from "../../../types";
 import EstimateCard from "./EstimateCard";
 import axios from "axios";
 import { useNavigate } from "react-router";

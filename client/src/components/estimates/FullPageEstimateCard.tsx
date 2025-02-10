@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Estimate } from "../../../../db/src/entity/Estimate";
+import { Estimate } from "../../../types";
 
 const FullPageEstimateCard = () => {
   const { id } = useParams();

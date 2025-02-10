@@ -1,4 +1,4 @@
-import { Employee } from "../../../../db/src/entity/Employee";
+import { Employee } from "../../../types";
 
 interface EmployeeCardProps {
   employee: Employee;

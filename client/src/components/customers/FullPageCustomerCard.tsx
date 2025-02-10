@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Customer } from "../../../../db/src/entity/Customer";
+import { Customer } from "../../../types";
 
 const FullPageCustomerCard = () => {
   const { id } = useParams();

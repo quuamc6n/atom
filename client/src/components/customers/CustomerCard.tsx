@@ -1,4 +1,4 @@
-import { Customer } from "../../../../db/src/entity/Customer";
+import { Customer } from "../../../types";
 
 interface CustomerCardProps {
   customer: Customer;

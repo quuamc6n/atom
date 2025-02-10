@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { Job } from "../../../../db/src/entity/Job";
+import { Job } from "../../../types";
 import { useEffect, useState } from "react";
 import axios from "axios";
 

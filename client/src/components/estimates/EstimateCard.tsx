@@ -1,4 +1,4 @@
-import { Estimate } from "../../../../db/src/entity/Estimate";
+import { Estimate } from "../../../types";
 
 interface EstimateProps {
   estimate: Estimate;

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Estimate } from "../../../../db/src/entity/Estimate";
-import { Job } from "../../../../db/src/entity/Job";
-import { Customer } from "../../../../db/src/entity/Customer";
+import { Estimate } from "../../../types";
+import { Job } from "../../../types";
+import { Customer } from "../../../types";
 
 interface InvoiceFormData {
   customerId: number;

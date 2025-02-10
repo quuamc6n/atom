@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Job } from "../../../../db/src/entity/Job";
+import { Job } from "../../../types";
 import { useNavigate } from "react-router";
 import JobsCard from "./JobsCard";
 

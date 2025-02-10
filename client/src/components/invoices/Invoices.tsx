@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Invoice } from "../../../../db/src/entity/Invoice";
+import { Invoice } from "../../../types";
 import InvoiceCard from "./InvoiceCard";
 import { useNavigate } from "react-router";
 

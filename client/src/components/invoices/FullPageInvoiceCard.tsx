@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Invoice } from "../../../../db/src/entity/Invoice";
+import { Invoice } from "../../../types";
 
 const FullPageInvoiceCard = () => {
   const { id } = useParams();

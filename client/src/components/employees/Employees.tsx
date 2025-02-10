@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router";
-import { Employee } from "../../../../db/src/entity/Employee";
+import { Employee } from "../../../types";
 import EmployeeCard from "./EmployeeCard";
 
 const Employees = () => {

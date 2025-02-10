@@ -1,4 +1,4 @@
-import { Job } from "../../../../db/src/entity/Job";
+import { Job } from "../../../types";
 
 interface JobCardProps {
   job: Job;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Customer } from "../../../../db/src/entity/Customer";
+import { Customer } from "../../../types";
 
 const CreateNewEstimate: React.FC = () => {
   const [formData, setFormData] = useState({
