@@ -21,15 +21,18 @@ const CreateNewCustomer = () => {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000/create-customer", {
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone,
-        jobIds: [],
-        invoiceIds: [],
-        estimateIds: [],
-        companyId: 1,
-      });
+      await axios.post(
+        "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/create-customer",
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          jobIds: [],
+          invoiceIds: [],
+          estimateIds: [],
+          companyId: 1,
+        }
+      );
 
       setFormData({ name: "", email: "", phone: "" });
     } catch (err) {

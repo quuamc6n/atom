@@ -28,12 +28,12 @@ const CreateNewInvoice: React.FC = () => {
     const fetchData = async () => {
       try {
         const estimatesRes = await axios.get(
-          "http://localhost:5000/estimates?status=Approved"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/estimates?status=Approved"
         );
         setEstimates(estimatesRes.data);
 
         const jobsRes = await axios.get(
-          "http://localhost:5000/jobs?isPaid=false"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/jobs?isPaid=false"
         );
         setJobs(jobsRes.data);
       } catch (error) {
@@ -49,7 +49,9 @@ const CreateNewInvoice: React.FC = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/customers");
+        const response = await axios.get(
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers"
+        );
         setCustomers(response.data);
       } catch (error) {
         console.error("Error fetching customers:", error);
@@ -67,7 +69,10 @@ const CreateNewInvoice: React.FC = () => {
     e.preventDefault();
     const payload = { ...formData, estimateIds: [formData.estimateIds] };
     try {
-      await axios.post("http://localhost:5000/create-invoice", payload);
+      await axios.post(
+        "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/create-invoice",
+        payload
+      );
       setFormData({
         customerId: 0,
         estimateIds: [],

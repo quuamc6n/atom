@@ -13,7 +13,9 @@ const CreateNewEstimate: React.FC = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/customers");
+        const response = await axios.get(
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers"
+        );
         setCustomers(response.data);
       } catch (error) {
         console.error("Error fetching customers:", error);
@@ -50,7 +52,10 @@ const CreateNewEstimate: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/create-estimate", formData);
+      await axios.post(
+        "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/create-estimate",
+        formData
+      );
       setFormData({
         customerId: 0,
         lineItems: [{ name: "", price: 0 }],
