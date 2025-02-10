@@ -31,6 +31,13 @@ const CreateNewCustomer = () => {
           invoiceIds: [],
           estimateIds: [],
           companyId: 1,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "ngrok-skip-browser-warning": "true",
+          },
         }
       );
 

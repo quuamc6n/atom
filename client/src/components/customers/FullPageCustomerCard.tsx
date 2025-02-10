@@ -10,7 +10,14 @@ const FullPageCustomerCard = () => {
   useEffect(() => {
     const fetchSingleCustomer = async () => {
       const result = await axios.get(
-        `https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers/${id}`
+        `https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers/${id}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       const fetchedCustomer = result.data;
       setCustomer(fetchedCustomer);

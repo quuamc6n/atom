@@ -28,12 +28,26 @@ const CreateNewInvoice: React.FC = () => {
     const fetchData = async () => {
       try {
         const estimatesRes = await axios.get(
-          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/estimates?status=Approved"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/estimates?status=Approved",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "ngrok-skip-browser-warning": "true",
+            },
+          }
         );
         setEstimates(estimatesRes.data);
 
         const jobsRes = await axios.get(
-          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/jobs?isPaid=false"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/jobs?isPaid=false",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "ngrok-skip-browser-warning": "true",
+            },
+          }
         );
         setJobs(jobsRes.data);
       } catch (error) {
@@ -50,7 +64,14 @@ const CreateNewInvoice: React.FC = () => {
     const fetchCustomers = async () => {
       try {
         const response = await axios.get(
-          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "ngrok-skip-browser-warning": "true",
+            },
+          }
         );
         setCustomers(response.data);
       } catch (error) {
@@ -71,7 +92,14 @@ const CreateNewInvoice: React.FC = () => {
     try {
       await axios.post(
         "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/create-invoice",
-        payload
+        payload,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       setFormData({
         customerId: 0,

@@ -15,7 +15,14 @@ const CreateNewJob = () => {
     const fetchEmployees = async () => {
       try {
         const response = await axios.get(
-          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/employees"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/employees",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "ngrok-skip-browser-warning": "true",
+            },
+          }
         );
         setEmployees(response.data);
       } catch (error) {
@@ -30,7 +37,14 @@ const CreateNewJob = () => {
     const fetchCustomers = async () => {
       try {
         const response = await axios.get(
-          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers"
+          "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/customers",
+          {
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+              "ngrok-skip-browser-warning": "true",
+            },
+          }
         );
         setCustomers(response.data);
       } catch (error) {
@@ -46,7 +60,14 @@ const CreateNewJob = () => {
     try {
       await axios.post(
         "https://b9d6-2001-56a-7d53-8a00-301b-d8fd-39e8-56ac.ngrok-free.app/create-job",
-        formData
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            "ngrok-skip-browser-warning": "true",
+          },
+        }
       );
       setFormData({
         customerId: 0,
