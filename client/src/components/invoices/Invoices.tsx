@@ -10,7 +10,7 @@ const Invoices = () => {
 
   useEffect(() => {
     const fetchInvoices = async () => {
-      const result = await axios.get("http://localhost:5000invoices");
+      const result = await axios.get("http://localhost:5000/invoices");
       setInvoices(result.data);
     };
     fetchInvoices();

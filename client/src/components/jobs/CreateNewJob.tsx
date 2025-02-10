@@ -14,7 +14,7 @@ const CreateNewJob = () => {
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
-        const response = await axios.get("http://localhost:5000employees");
+        const response = await axios.get("http://localhost:5000/employees");
         setEmployees(response.data);
       } catch (error) {
         console.error("Error fetching employees:", error);
@@ -27,7 +27,7 @@ const CreateNewJob = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000customers");
+        const response = await axios.get("http://localhost:5000/customers");
         setCustomers(response.data);
       } catch (error) {
         console.error("Error fetching customers:", error);
@@ -40,7 +40,7 @@ const CreateNewJob = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000create-job", formData);
+      await axios.post("http://localhost:5000/create-job", formData);
       setFormData({
         customerId: 0,
         assigneeId: 0,

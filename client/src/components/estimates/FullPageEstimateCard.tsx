@@ -12,7 +12,7 @@ const FullPageEstimateCard = () => {
 
   useEffect(() => {
     const fetchSingleEstimate = async () => {
-      const result = await axios.get(`http://localhost:5000estimates/${id}`);
+      const result = await axios.get(`http://localhost:5000/estimates/${id}`);
       const fetchedEstimate = result.data;
       setEstimate(fetchedEstimate);
     };
@@ -40,8 +40,10 @@ const FullPageEstimateCard = () => {
             ""
           ) : (
             <p>
-              <span className="card-category">Invoices </span> :
-              {estimate.invoices?.map((invoice) => invoice.id)}
+              <span className="card-category">Invoices </span>
+              {estimate.invoices?.map((invoice) => (
+                <p>#{invoice.id}</p>
+              ))}
             </p>
           )}
           <p className="lineItem-container">

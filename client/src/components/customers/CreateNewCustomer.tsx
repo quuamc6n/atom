@@ -21,7 +21,7 @@ const CreateNewCustomer = () => {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000create-customer", {
+      await axios.post("http://localhost:5000/create-customer", {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,

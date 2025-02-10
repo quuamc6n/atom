@@ -9,7 +9,7 @@ const FullPageJobCard: React.FC<Partial<Job>> = () => {
 
   useEffect(() => {
     const fetchSingleJob = async () => {
-      const result = await axios.get(`http://localhost:5000jobs/${id}`);
+      const result = await axios.get(`http://localhost:5000/jobs/${id}`);
       const fetchedJob = result.data;
       setJob(fetchedJob);
     };

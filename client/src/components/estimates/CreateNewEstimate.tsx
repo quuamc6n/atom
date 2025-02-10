@@ -13,7 +13,7 @@ const CreateNewEstimate: React.FC = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000customers");
+        const response = await axios.get("http://localhost:5000/customers");
         setCustomers(response.data);
       } catch (error) {
         console.error("Error fetching customers:", error);
@@ -50,7 +50,7 @@ const CreateNewEstimate: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000create-estimate", formData);
+      await axios.post("http://localhost:5000/create-estimate", formData);
       setFormData({
         customerId: 0,
         lineItems: [{ name: "", price: 0 }],

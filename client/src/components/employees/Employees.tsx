@@ -10,7 +10,7 @@ const Employees = () => {
 
   useEffect(() => {
     const fetchEmployees = async () => {
-      const result = await axios.get("http://localhost:5000employees");
+      const result = await axios.get("http://localhost:5000/employees");
       setEmployees(result.data);
     };
     fetchEmployees();

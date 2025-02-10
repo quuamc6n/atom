@@ -23,7 +23,7 @@ const CreateNewEmployee = () => {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000create-employee", {
+      await axios.post("http://localhost:5000/create-employee", {
         firstName: formData.firstName,
         lastName: formData.lastName,
         dob: formData.dob,

@@ -14,7 +14,7 @@ const FullPageInvoiceCard = () => {
 
   useEffect(() => {
     const fetchSingleInvoice = async () => {
-      const result = await axios.get(`http://localhost:5000invoices/${id}`);
+      const result = await axios.get(`http://localhost:5000/invoices/${id}`);
       const fetchedInvoice = result.data;
       setInvoice(fetchedInvoice);
     };
@@ -34,7 +34,7 @@ const FullPageInvoiceCard = () => {
           </div>
           <p>
             <span className="card-category">Paid?</span>
-            {!invoice.isPaid ? (
+            {invoice.isPaid ? (
               <span className="paid">Paid!</span>
             ) : (
               <span className="unpaid">Unpaid!</span>

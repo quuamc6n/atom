@@ -9,7 +9,7 @@ const FullPageCustomerCard = () => {
 
   useEffect(() => {
     const fetchSingleCustomer = async () => {
-      const result = await axios.get(`http://localhost:5000customers/${id}`);
+      const result = await axios.get(`http://localhost:5000/customers/${id}`);
       const fetchedCustomer = result.data;
       setCustomer(fetchedCustomer);
     };

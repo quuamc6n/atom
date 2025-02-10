@@ -10,9 +10,7 @@ const Estimates = () => {
 
   useEffect(() => {
     const fetchEstimates = async () => {
-      const result = await axios.get(
-        "http://localhost:5000estimates"
-      );
+      const result = await axios.get("http://localhost:5000/estimates");
       setEstimates(result.data);
     };
     fetchEstimates();

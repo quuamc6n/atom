@@ -9,7 +9,7 @@ const FullPageEmployeeCard = () => {
 
   useEffect(() => {
     const fetchSingleEmployee = async () => {
-      const result = await axios.get(`http://localhost:5000employees/${id}`);
+      const result = await axios.get(`http://localhost:5000/employees/${id}`);
       const fetchedEmployee = result.data;
       setEmployee(fetchedEmployee);
     };

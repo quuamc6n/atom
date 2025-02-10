@@ -28,12 +28,12 @@ const CreateNewInvoice: React.FC = () => {
     const fetchData = async () => {
       try {
         const estimatesRes = await axios.get(
-          "http://localhost:5000estimates?status=Approved"
+          "http://localhost:5000/estimates?status=Approved"
         );
         setEstimates(estimatesRes.data);
 
         const jobsRes = await axios.get(
-          "http://localhost:5000jobs?isPaid=false"
+          "http://localhost:5000/jobs?isPaid=false"
         );
         setJobs(jobsRes.data);
       } catch (error) {
@@ -49,7 +49,7 @@ const CreateNewInvoice: React.FC = () => {
   useEffect(() => {
     const fetchCustomers = async () => {
       try {
-        const response = await axios.get("http://localhost:5000customers");
+        const response = await axios.get("http://localhost:5000/customers");
         setCustomers(response.data);
       } catch (error) {
         console.error("Error fetching customers:", error);
@@ -67,7 +67,7 @@ const CreateNewInvoice: React.FC = () => {
     e.preventDefault();
     const payload = { ...formData, estimateIds: [formData.estimateIds] };
     try {
-      await axios.post("http://localhost:5000create-invoice", payload);
+      await axios.post("http://localhost:5000/create-invoice", payload);
       setFormData({
         customerId: 0,
         estimateIds: [],
